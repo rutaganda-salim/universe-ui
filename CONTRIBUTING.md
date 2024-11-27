@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to nyxbui.design. We're happy to have you here.
+Thanks for your interest in contributing to universeui.design. We're happy to have you here.
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
@@ -41,7 +41,7 @@ packages
 | `apps/web/components` | The React components for the website.    |
 | `apps/web/content`    | The content for the website.             |
 | `apps/web/registry`   | The registry for the components.         |
-| `packages/cli`        | The `nyxbui` package.                    |
+| `packages/cli`        | The `universeui` package.                    |
 
 ## Development
 
@@ -79,16 +79,16 @@ You can use the `pnpm --filter=[WORKSPACE]` command to start the development pro
 
 #### Examples
 
-1. To run the `nyxbui.design` website:
+1. To run the `universeui.design` website:
 
 ```bash
 pnpm --filter=web dev
 ```
 
-2. To run the `nyxbui` package:
+2. To run the `universeui` package:
 
 ```bash
-pnpm --filter=nyxbui dev
+pnpm --filter=universeui dev
 ```
 
 ## Documentation
@@ -164,7 +164,7 @@ Upload an image of your site to `public/showcase/website-name.png`
 
 ## CLI
 
-The `nyxbui` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](https://nyxbui.design/docs/cli).
+The `universeui` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](https://universeui.design/docs/cli).
 
 Any changes to the CLI should be made in the `packages/cli` directory. If you can, it would be great if you could add tests for your changes.
 
