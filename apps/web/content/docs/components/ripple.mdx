@@ -1,0 +1,68 @@
+---
+title: Ripple
+date: 2023-11-18
+description: An animated ripple effect typically used behind elements to emphasize them.
+author: nyxb
+published: true
+video: https://cdn.nyxbui.design/ripple.mp4
+---
+
+<ComponentPreview name="ripple-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add ripple
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        ripple: "ripple 3400ms ease infinite",
+      },
+      keyframes: {
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+```text
+components/ui/ripple.tsx
+```
+
+<ComponentSource name="ripple" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>

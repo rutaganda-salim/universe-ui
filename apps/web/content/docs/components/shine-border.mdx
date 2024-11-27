@@ -1,0 +1,85 @@
+---
+title: Shine Border
+date: 2024-05-25
+description: Shine border is an animated background border effect.
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="shine-border-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add shine-border
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+```text
+components/ui/shine-border.tsx
+```
+
+<ComponentSource name="shine-border" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Examples
+
+### Silver
+
+<ComponentPreview name="shine-border-demo-2" />
+
+## Props
+
+| Prop         | Type                           | Description                                         | Default    |
+| ------------ | ------------------------------ | --------------------------------------------------- | ---------- |
+| className    | string                         | The class name to be applied to the component.       |            |
+| duration     | number                         | Defines the animation duration to be applied on the shining border. | 14 seconds |
+| color        | `#${string}` OR `#${string}`[] | A string or string array to define border color.    | #FFFFFF    |
+| borderRadius | number                         | Defines the radius of the border.                   | 8px        |
+| borderWidth  | number                         | Defines the width of the border.                    | 1px        |
+| children     | ReactNode                | Contains react node elements.                       | {}         |
+

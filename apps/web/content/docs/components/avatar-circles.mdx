@@ -1,0 +1,51 @@
+---
+title: Avatar Circles
+date: 2024-05-22
+description: Overlapping circles of avatars.
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="avatar-circles-demo" button="copy" styleSwitch />
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add avatar-circles
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+
+Copy and paste the following code into your project.
+
+```text
+components/ui/avatar-circles.tsx
+```
+
+<ComponentSource name="avatar-circles" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type            | Description                                        | Default |
+| ----------- | --------------- | -------------------------------------------------- | ------- |
+| className   | string          | The class name to be applied to the component      |         |
+| numPeople   | number          | The number appearing in the last circle            | 99      |

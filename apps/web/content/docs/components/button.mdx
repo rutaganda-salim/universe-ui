@@ -1,0 +1,184 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+featured: true
+component: true
+---
+
+<ComponentPreview 
+   name="button-demo" 
+   description="A button"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add button
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+pnpm add @radix-ui/react-slot
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Button } from "~/components/ui/button"
+```
+
+```tsx
+<Button variant="outline">Button</Button>
+```
+
+## Link
+
+You can use the `buttonVariants` helper to create a link that looks like a button.
+
+```tsx
+import { buttonVariants } from "~/components/ui/button"
+```
+
+```tsx
+<Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
+```
+
+Alternatively, you can set the `asChild` parameter and nest the link component.
+
+```tsx
+<Button asChild>
+  <Link href="/login">Login</Link>
+</Button>
+```
+
+## Examples
+
+### Primary
+
+<ComponentPreview 
+   name="button-demo" 
+   description="A primary button"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Secondary
+
+<ComponentPreview 
+   name="button-secondary" 
+   description="A secondary button"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Destructive
+
+<ComponentPreview
+  name="button-destructive"
+  description="A destructive button"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Outline
+
+<ComponentPreview
+  name="button-outline"
+  description="A button using the outline variant."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Ghost
+
+<ComponentPreview
+  name="button-ghost"
+  description="A button using the ghost variant"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Link
+
+<ComponentPreview
+  name="button-link"
+  description="A button using the link variant."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Icon
+
+<ComponentPreview 
+   name="button-icon" 
+   description="An icon button"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### With Icon
+
+<ComponentPreview 
+   name="button-with-icon" 
+   description="A button with an icon"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Loading
+
+<ComponentPreview
+  name="button-loading"
+  description="A button with a loading state."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### As Child
+
+<ComponentPreview
+  name="button-as-child"
+  description="A button wrapping a custom Link component"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>

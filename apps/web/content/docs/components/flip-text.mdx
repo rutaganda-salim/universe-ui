@@ -1,0 +1,54 @@
+---
+title: Flip Text
+date: 2024-05-23
+description: Text flipping character animation
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="flip-text-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add flip-text
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```text
+components/ui/flip-text.tsx
+```
+
+<ComponentSource name="flip-text" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop          | Type            | Description                                        | Default |
+| ------------- | --------------- | -------------------------------------------------- | ------- |
+| className     | string          | The class name to be applied to the component      |         |
+| duration      | number          | The class name to be applied to the shimmer.       | 0.2     |
+| delayMultiple | number          | The class name to be applied to the shimmer.       | 0.08    |
+| word          | string          | An array of words to rotate through                | ""      |
+| framerProps   | HTMLMotionProps | An object containing framer-motion animation props | {}      |

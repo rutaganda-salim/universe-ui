@@ -1,0 +1,126 @@
+---
+title: Toggle
+description: A two-state button that can be either on or off.
+component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/toggle
+  api: https://www.radix-ui.com/docs/primitives/components/toggle#api-reference
+---
+
+<ComponentPreview 
+   name="toggle-demo" 
+   description="A toggle component."
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add toggle
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+ @radix-ui/react-toggle
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="toggle" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx
+<Toggle>Toggle</Toggle>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview 
+   name="toggle-demo" 
+   description="A toggle component."
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Outline
+
+<ComponentPreview
+  name="toggle-outline"
+  description="A toggle component using the outline variant."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### With Text
+
+<ComponentPreview
+  name="toggle-with-text"
+  description="A toggle component with text."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Small
+
+<ComponentPreview 
+   name="toggle-sm" 
+   description="A small toggle component."
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Large
+
+<ComponentPreview 
+   name="toggle-lg" 
+   description="A large toggle component."
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Disabled
+
+<ComponentPreview
+  name="toggle-disabled"
+  description="A disabled toggle component."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>

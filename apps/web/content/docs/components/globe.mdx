@@ -1,0 +1,66 @@
+---
+title: Globe
+date: 2023-08-02
+description: An autorotating, interactive, and highly performant globe made using WebGL.
+author: nyxb
+published: true
+video: https://cdn.nyxbui.design/globe.mp4
+---
+
+## ⚠️ Warning
+
+> The globe has known performance issues causing computer GPU and CPU to spike.
+
+<ComponentPreview name="globe-demo" />
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add globe
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```bash
+ -D cobe react-spring
+```
+
+```text
+components/ui/globe.tsx
+```
+
+<ComponentSource name="globe" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+
+## Props
+
+### Globe
+
+| Prop      | Type        | Description                                                                                    | Default |
+| --------- | ----------- | ---------------------------------------------------------------------------------------------- | ------- |
+| className | string      | The css classes for the component                                                              |         |
+| config    | COBEOptions | The configuration options for the globe. More details [here](https://cobe.vercel.app/docs/api) | `{}`    |
+
+## Credits
+
+This component is built on top of [Cobe](https://cobe.vercel.app/docs/api).

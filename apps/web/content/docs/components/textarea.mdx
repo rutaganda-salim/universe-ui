@@ -1,0 +1,117 @@
+---
+title: Textarea
+description: Displays a form textarea or a component that looks like a textarea.
+component: true
+---
+
+<ComponentPreview 
+   name="textarea-demo" 
+   description="A textarea"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add textarea
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="textarea" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Textarea } from "~/components/ui/textarea"
+```
+
+```tsx
+<Textarea />
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview 
+   name="textarea-demo" 
+   description="A textarea"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### Disabled
+
+<ComponentPreview 
+   name="textarea-disabled" 
+   description="A disabled textarea"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+### With Label
+
+<ComponentPreview
+  name="textarea-with-label"
+  className="[&_div.grid]:w-full"
+  description="A textarea with a label"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### With Text
+
+<ComponentPreview
+  name="textarea-with-text"
+  description="A textarea with text"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### With Button
+
+<ComponentPreview
+  name="textarea-with-button"
+  description="A textarea with a button"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Form
+
+<ComponentPreview 
+   name="textarea-form"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />

@@ -1,0 +1,135 @@
+---
+title: Drawer
+description: A drawer component for React.
+component: true
+links:
+  doc: https://github.com/emilkowalski/vaul
+---
+
+<ComponentPreview 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+   name="drawer-demo" />
+
+## About
+
+Drawer is built on top of [Vaul](https://github.com/emilkowalski/vaul) by [emilkowalski\_](https://twitter.com/emilkowalski_).
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add drawer
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+ vaul
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="drawer" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "~/components/ui/drawer"
+```
+
+```tsx showLineNumbers
+<Drawer>
+  <DrawerTrigger>Open</DrawerTrigger>
+  <DrawerContent>
+    <DrawerHeader>
+      <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+      <DrawerDescription>This action cannot be undone.</DrawerDescription>
+    </DrawerHeader>
+    <DrawerFooter>
+      <Button>Submit</Button>
+      <DrawerClose>
+        <Button variant="outline">Cancel</Button>
+      </DrawerClose>
+    </DrawerFooter>
+  </DrawerContent>
+</Drawer>
+```
+
+## Examples
+
+### Responsive Dialog
+
+You can combine the `Dialog` and `Drawer` components to create a responsive dialog. This renders a `Dialog` component on desktop and a `Drawer` on mobile.
+
+<Steps>
+
+### Hook Definitions
+
+First, we'll define our hook.
+
+```tsx showLineNumbers title="hooks/use-media-query.tsx"
+import * as React from "react"
+
+export function useMediaQuery(query: string) {
+  const [value, setValue] = React.useState(false)
+
+  React.useEffect(() => {
+    function onChange(event: MediaQueryListEvent) {
+      setValue(event.matches)
+    }
+
+    const result = matchMedia(query)
+    result.addEventListener("change", onChange)
+    setValue(result.matches)
+
+    return () => result.removeEventListener("change", onChange)
+  }, [query])
+
+  return value
+}
+```
+
+### Responsive Dialog
+
+Next, we'll create our responsive dialog.
+
+<ComponentPreview 
+   name="drawer-dialog"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
+
+</Steps>

@@ -1,0 +1,112 @@
+---
+title: Tooltip
+description: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/tooltip
+  api: https://www.radix-ui.com/docs/primitives/components/tooltip#api-reference
+---
+
+<ComponentPreview 
+   name="tooltip-demo" 
+   description="A tooltip component."
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+   />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add tooltip
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+ @radix-ui/react-tooltip
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tooltip" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "~/components/ui/tooltip"
+```
+
+```tsx
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger>Hover</TooltipTrigger>
+    <TooltipContent>
+      <p>Add to library</p>
+    </TooltipContent>
+  </Tooltip>
+</TooltipProvider>
+```
+
+## Examples
+
+### Primary
+
+<ComponentPreview 
+name="tooltip-demo" 
+description="A tooltip component."
+styleSwitch={true}
+button="copy"
+dots={false}
+/>
+
+### Secondary
+
+<ComponentPreview 
+name="tooltip-secondary" 
+description="A tooltip secondary component."
+styleSwitch={true}
+button="copy"
+dots={false}
+/>
+
+### Outline
+
+<ComponentPreview 
+name="tooltip-outline" 
+description="A tooltip outline component."
+styleSwitch={true}
+button="copy"
+dots={false}
+/>
+
+### Tooltip with Toggle
+
+<ComponentPreview name="tooltip-with-toggle-demo" description="A tooltip with Toggle component." styleSwitch={true} button="copy" dots={false} />

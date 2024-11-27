@@ -1,0 +1,72 @@
+---
+title: Animated Gradient Text
+date: 2024-04-09
+description: An animated gradient background which transitions between colors for text.
+author: nyxb
+published: true
+video: https://cdn.nyxbui.design/animated-gradient-text.mp4
+---
+
+<ComponentPreview name="animated-gradient-text-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add animated-gradient-text
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+```text
+components/ui/animated-gradient-text.tsx
+```
+
+<ComponentSource name="animated-gradient-text" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop         | Type   | Description                                  | Default |
+| ------------ | ------ | -------------------------------------------- | ------- |
+| children     |        | The children passed into the component                   |         |
+| className    | string | The class name to be applied to the shimmer. |         |

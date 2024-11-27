@@ -1,0 +1,57 @@
+---
+title: Scroll Based Velocity
+date: 2024-05-22
+description: Scrolling text whose speed changes based on scroll speed
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="scroll-based-velocity-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add scroll-based-velocity
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+```bash
+pnpm add @motionone/utils
+```
+
+Copy and paste the following code into your project.
+
+```text
+components/ui/scroll-based-velocity.tsx
+```
+
+<ComponentSource name="scroll-based-velocity" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+
+## Props
+
+| Prop             | Type   | Description                                   | Default |
+| ---------------- | ------ | --------------------------------------------- | ------- |
+| className        | string | The class name to be applied to the component |         |
+| text             | string | Text to be animated                           | ""      |
+| default_velocity | number | Base scroll velocity of text                  | 5       |

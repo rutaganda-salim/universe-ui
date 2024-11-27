@@ -1,0 +1,52 @@
+---
+title: Staggered Letter Pull Up Animation
+date: 2024-05-22
+description: Staggered letter pull up text animation.
+author: nyxb
+published: true
+---
+
+<ComponentPreview name = "letter-pullup-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add letter-pullup
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```text
+components/ui/letter-pullup.tsx
+```
+
+<ComponentSource name = "letter-pullup" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type            | Description                                        | Default                    |
+| ----------- | --------------- | -------------------------------------------------- | -------------------------- |
+| className   | string          | The class name to be applied to the component      |                            |
+| words       | string          | Text to animate                                    | "Staggered Letter Pull Up" |
+| delay       | number          | Delay each letter's animation by this many seconds | 0.05                       |
