@@ -1,3 +1,3 @@
 ## Universe ui
 
-Contributions are open[/CONTRIBUTING.md]
+Contributions are open[https://github.com/rutaganda-salim/universe-ui/blob/main/CONTRIBUTING.md]
